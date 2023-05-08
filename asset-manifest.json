@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/tweet-app-test/static/css/main.54d223ca.css",
+    "main.js": "/tweet-app-test/static/js/main.d53d901f.js",
+    "static/js/415.f3801cef.chunk.js": "/tweet-app-test/static/js/415.f3801cef.chunk.js",
+    "static/js/413.168d76e8.chunk.js": "/tweet-app-test/static/js/413.168d76e8.chunk.js",
+    "static/js/889.6f0c47e9.chunk.js": "/tweet-app-test/static/js/889.6f0c47e9.chunk.js",
+    "static/media/picture.svg": "/tweet-app-test/static/media/picture.dd7094b01bbf0f6eb73eb0a216fc6fb9.svg",
+    "static/media/logo.svg": "/tweet-app-test/static/media/logo.879402870d85471318777d1ebbc5c3c4.svg",
+    "index.html": "/tweet-app-test/index.html",
+    "main.54d223ca.css.map": "/tweet-app-test/static/css/main.54d223ca.css.map",
+    "main.d53d901f.js.map": "/tweet-app-test/static/js/main.d53d901f.js.map",
+    "415.f3801cef.chunk.js.map": "/tweet-app-test/static/js/415.f3801cef.chunk.js.map",
+    "413.168d76e8.chunk.js.map": "/tweet-app-test/static/js/413.168d76e8.chunk.js.map",
+    "889.6f0c47e9.chunk.js.map": "/tweet-app-test/static/js/889.6f0c47e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54d223ca.css",
+    "static/js/main.d53d901f.js"
+  ]
+}
