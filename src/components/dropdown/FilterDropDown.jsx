@@ -11,7 +11,7 @@ import { useUsers } from 'hooks';
 
 const FilterDropDown = () => {
   const location = useLocation();
-  const backLinkRef = useRef(location.state?.from ?? '/');
+  const backLinkRef = useRef(location.state?.from ?? '/tweets');
   const dispatch = useDispatch();
   const { filterStatus } = useUsers();
 
