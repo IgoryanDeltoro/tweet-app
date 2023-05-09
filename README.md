@@ -1,4 +1,5 @@
 Tweeter
+
 Tweeter is a simple social media platform that allows users to follow-up followers.
 It was created as a learning project for a web development course.
 
