@@ -1,4 +1,6 @@
+import LottieAnimation from 'components/lottie/Lottie';
+
 const Home = () => {
-  return <></>;
+  return <LottieAnimation />;
 };
 export default Home;

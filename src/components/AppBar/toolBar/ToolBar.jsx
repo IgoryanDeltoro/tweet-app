@@ -5,9 +5,11 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import { Link } from './ToolBar.styled';
+import { LinkToolBar } from './ToolBar.styled';
+import { useLocation } from 'react-router-dom/dist';
 
 const ToolBar = ({ handleDrawerToggle, navItems }) => {
+  const Location = useLocation();
   return (
     <Toolbar>
       <IconButton
@@ -29,7 +31,12 @@ const ToolBar = ({ handleDrawerToggle, navItems }) => {
       <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
         {navItems.map((item, idx) => (
           <Button key={item} sx={{ color: '#fff' }}>
-            <Link to={`${idx === 0 ? '/' : item.toLowerCase()}`}>{item}</Link>
+            <LinkToolBar
+              state={{ from: Location }}
+              to={`${idx === 0 ? '/' : item.toLowerCase()}`}
+            >
+              {item}
+            </LinkToolBar>
           </Button>
         ))}
       </Box>

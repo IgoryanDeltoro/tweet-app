@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { tweetsReducer } from './tweetsSlice';
-import { filtersReducer } from './filterSlice';
+import { tweetsReducer } from './tweets/tweetsSlice';
+import { filtersReducer } from './filter/filterSlice';
 import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
@@ -12,14 +12,6 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-
-// const rootReducer = combineReducers({
-//   tweets: tweetsReducer,
-//   filter: filtersReducer,
-// });
-// export const store = configureStore({
-//   reducer: rootReducer,
-// });
 
 const persistConfig = {
   key: 'filter',

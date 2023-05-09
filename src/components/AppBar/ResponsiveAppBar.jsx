@@ -2,9 +2,7 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-
 import ToolBar from './toolBar/ToolBar';
-
 import Shell from './toolBar/Shell';
 
 const drawerWidth = 240;

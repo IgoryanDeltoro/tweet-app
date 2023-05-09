@@ -14,8 +14,9 @@ import {
   Line,
   Layout,
   ImgBox,
-} from './Card.stylrd';
-import { useAuth } from '../../hooks/useAuth';
+} from './Card.styled';
+import { useUsers } from '../../hooks/useUsers';
+import { replacer } from 'general/replacer';
 
 export default function MediaCard({
   id,
@@ -24,8 +25,10 @@ export default function MediaCard({
   followers,
   handleOnClick,
 }) {
-  const { followingsID } = useAuth();
+  const { followingsID } = useUsers();
   const isFollow = followingsID.includes(id);
+  const changedFollowers = replacer(followers);
+
   return (
     <Grid item xs={3} sm={3} md={4}>
       <Card>
@@ -33,17 +36,14 @@ export default function MediaCard({
         <ImgBox>
           <CardImg src={picture} />
         </ImgBox>
-
         <Layout>
           <Line />
           <AvatarBox>
             <Avatar src={avatar} />
           </AvatarBox>
-          <Line />
         </Layout>
-
         <TweetText>{tweets} tweets</TweetText>
-        <FollowerText>{followers} followers</FollowerText>
+        <FollowerText>{changedFollowers} followers</FollowerText>
         <Button
           className={isFollow ? 'green' : 'white'}
           onClick={() => handleOnClick(id, isFollow)}
