@@ -21,7 +21,7 @@ const TollBarMenu = ({ handleDrawerToggle, navItems }) => {
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <LinkToolBar
-                state={{ from: Location }}
+                state={idx === 0 && { from: Location }}
                 to={`${idx === 0 ? '/' : '/' + item.toLowerCase()}`}
               >
                 {item}

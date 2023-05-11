@@ -10,6 +10,7 @@ import { useLocation } from 'react-router-dom/dist';
 
 const ToolBar = ({ handleDrawerToggle, navItems }) => {
   const Location = useLocation();
+  console.log({ from: Location });
   return (
     <Toolbar>
       <IconButton
@@ -32,8 +33,8 @@ const ToolBar = ({ handleDrawerToggle, navItems }) => {
         {navItems.map((item, idx) => (
           <Button key={item} sx={{ color: '#fff' }}>
             <LinkToolBar
-              state={{ from: Location }}
-              to={`${idx === 0 ? '/' : item.toLowerCase()}`}
+              state={idx === 0 && { from: Location }}
+              to={`${idx === 0 ? '/' : '/' + item.toLowerCase()}`}
             >
               {item}
             </LinkToolBar>
