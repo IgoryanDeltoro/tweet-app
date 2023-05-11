@@ -1,4 +1,15 @@
-export const gridTools = {
-  spacing: { xs: 2, md: 3 },
-  columns: { xs: 2, sm: 6, md: 12 },
-};
+import styled from 'styled-components';
+
+export const CardList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: 740px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+`;
