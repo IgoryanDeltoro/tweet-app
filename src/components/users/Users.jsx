@@ -8,7 +8,7 @@ import { removeFollower, setFollower } from '../../redux/filter/filterSlice';
 import { useState } from 'react';
 import LoadMore from 'components/pagination/LoadMore';
 import { getFilteredFollowers } from 'redux/selectors';
-import { gridTools } from './Users.styled';
+import { CardList, gridTools } from './Users.styled';
 import { animateScroll } from 'react-scroll';
 
 const Users = () => {
@@ -61,23 +61,21 @@ const Users = () => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container {...gridTools}>
-          {[...filteredUsers]
-            .splice(0, loadMore)
-            .map(({ user, id, avatar, tweets, followers }) => (
-              <Card
-                key={id}
-                id={id}
-                user={user}
-                avatar={avatar}
-                tweets={tweets}
-                followers={followers}
-                handleOnClick={handleOnClick}
-              />
-            ))}
-        </Grid>
-      </Box>
+      <CardList>
+        {[...filteredUsers]
+          .splice(0, loadMore)
+          .map(({ user, id, avatar, tweets, followers }) => (
+            <Card
+              key={id}
+              id={id}
+              user={user}
+              avatar={avatar}
+              tweets={tweets}
+              followers={followers}
+              handleOnClick={handleOnClick}
+            />
+          ))}
+      </CardList>
       {!isLoading && (
         <>
           {page < countPagination && (
