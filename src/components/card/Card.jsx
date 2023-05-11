@@ -30,28 +30,25 @@ export default function MediaCard({
   const changedFollowers = replacer(followers);
 
   return (
-    <Grid item xs={3} sm={3} md={4}>
-      <Card>
-        <Logo src={logo} />
-        <ImgBox>
-          <CardImg src={picture} />
-        </ImgBox>
-        <Layout>
-          <Line />
-          <AvatarBox>
-            <Avatar src={avatar} />
-          </AvatarBox>
-        </Layout>
-        <TweetText>{tweets} tweets</TweetText>
-        <FollowerText>{changedFollowers} followers</FollowerText>
-        <Button
-          className={isFollow ? 'green' : 'white'}
-          onClick={() => handleOnClick(id, isFollow)}
-        >
-          {isFollow ? 'Following' : 'Follow'}
-        </Button>
-      </Card>
-    </Grid>
+    <Card>
+      <Logo src={logo} alt="logotype" />
+      <ImgBox>
+        <CardImg src={picture} alt="logotype" />
+      </ImgBox>
+      <Layout>
+        <AvatarBox>
+          <Avatar src={avatar} alt="people" />
+        </AvatarBox>
+      </Layout>
+      <TweetText>{tweets} tweets</TweetText>
+      <FollowerText>{changedFollowers} followers</FollowerText>
+      <Button
+        className={isFollow ? 'green' : 'white'}
+        onClick={() => handleOnClick(id, isFollow)}
+      >
+        {isFollow ? 'Following' : 'Follow'}
+      </Button>
+    </Card>
   );
 }
 
