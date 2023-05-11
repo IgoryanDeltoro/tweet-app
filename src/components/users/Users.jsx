@@ -1,5 +1,3 @@
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import Card from '../card/Card';
 import { useUsers } from '../../hooks/useUsers';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +6,7 @@ import { removeFollower, setFollower } from '../../redux/filter/filterSlice';
 import { useState } from 'react';
 import LoadMore from 'components/pagination/LoadMore';
 import { getFilteredFollowers } from 'redux/selectors';
-import { CardList, gridTools } from './Users.styled';
+import { CardList } from './Users.styled';
 import { animateScroll } from 'react-scroll';
 
 const Users = () => {
