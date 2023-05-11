@@ -1,6 +1,5 @@
 import logo from '../../images/logo.svg';
 import picture from '../../images/picture.svg';
-import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import {
   CardImg,
@@ -11,7 +10,6 @@ import {
   FollowerText,
   Avatar,
   AvatarBox,
-  Line,
   Layout,
   ImgBox,
 } from './Card.styled';
