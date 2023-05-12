@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import Typography from '@mui/material/Typography';
 import { LinkToolBar } from './ToolBar.styled';
-import { useLocation } from 'react-router-dom/dist';
+import { useLocation } from 'react-router-dom';
 
 const TollBarMenu = ({ handleDrawerToggle }) => {
   const location = useLocation();
@@ -20,14 +20,14 @@ const TollBarMenu = ({ handleDrawerToggle }) => {
       <List>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: 'center' }}>
-            <LinkToolBar to="/">Home</LinkToolBar>
+            <LinkToolBar state={{ from: location }} to="/">
+              Home
+            </LinkToolBar>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: 'center' }}>
-            <LinkToolBar state={{ from: location }} to="tweets">
-              Tweets
-            </LinkToolBar>
+            <LinkToolBar to="tweets">Tweets</LinkToolBar>
           </ListItemButton>
         </ListItem>
       </List>

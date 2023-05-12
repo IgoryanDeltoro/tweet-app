@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { LinkToolBar } from './ToolBar.styled';
-import { useLocation } from 'react-router-dom/dist';
+import { useLocation } from 'react-router-dom';
 
 const ToolBar = ({ handleDrawerToggle }) => {
   const location = useLocation();
@@ -31,12 +31,12 @@ const ToolBar = ({ handleDrawerToggle }) => {
       </Typography>
       <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
         <Button sx={{ color: '#fff' }}>
-          <LinkToolBar to="/">Home</LinkToolBar>
+          <LinkToolBar state={{ from: location }} to="/">
+            Home
+          </LinkToolBar>
         </Button>
         <Button sx={{ color: '#fff' }}>
-          <LinkToolBar state={{ from: location }} to="tweets">
-            Tweets
-          </LinkToolBar>
+          <LinkToolBar to="tweets">Tweets</LinkToolBar>
         </Button>
       </Box>
     </Toolbar>
