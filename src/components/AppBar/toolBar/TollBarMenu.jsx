@@ -25,7 +25,7 @@ const TollBarMenu = ({ handleDrawerToggle }) => {
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: 'center' }}>
-            <LinkToolBar state={{ from: location }} to="/tweets">
+            <LinkToolBar state={{ from: location }} to="tweets">
               Tweets
             </LinkToolBar>
           </ListItemButton>

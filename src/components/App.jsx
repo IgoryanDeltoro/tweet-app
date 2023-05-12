@@ -9,7 +9,7 @@ function Tweet() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="/tweets" element={<TweetsPage />} />
+        <Route path="tweets" element={<TweetsPage />} />
       </Route>
     </Routes>
   );

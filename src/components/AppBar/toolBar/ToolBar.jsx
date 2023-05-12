@@ -34,7 +34,7 @@ const ToolBar = ({ handleDrawerToggle }) => {
           <LinkToolBar to="/">Home</LinkToolBar>
         </Button>
         <Button sx={{ color: '#fff' }}>
-          <LinkToolBar state={{ from: location }} to="/tweets">
+          <LinkToolBar state={{ from: location }} to="tweets">
             Tweets
           </LinkToolBar>
         </Button>
