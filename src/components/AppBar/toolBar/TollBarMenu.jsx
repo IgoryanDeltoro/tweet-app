@@ -8,8 +8,9 @@ import Typography from '@mui/material/Typography';
 import { LinkToolBar } from './ToolBar.styled';
 import { useLocation } from 'react-router-dom/dist';
 
-const TollBarMenu = ({ handleDrawerToggle, navItems }) => {
-  const Location = useLocation();
+const TollBarMenu = ({ handleDrawerToggle }) => {
+  const location = useLocation();
+
   return (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -17,26 +18,23 @@ const TollBarMenu = ({ handleDrawerToggle, navItems }) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item, idx) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <LinkToolBar
-                state={{ from: Location }}
-                to={`${idx === 1 ? '/' : '/' + item.toLowerCase()}`}
-              >
-                {item}
-              </LinkToolBar>
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <LinkToolBar to="/">Home</LinkToolBar>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <LinkToolBar state={{ from: location }} to="/tweets">
+              Tweets
+            </LinkToolBar>
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
 };
 
-TollBarMenu.propTypes = {
-  handleDrawerToggle: PropTypes.func,
-  navItems: PropTypes.array,
-};
+TollBarMenu.propTypes = { handleDrawerToggle: PropTypes.func };
 
 export default TollBarMenu;

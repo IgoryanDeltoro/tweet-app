@@ -18,10 +18,10 @@ const FilterDropDown = () => {
   const handleOnClick = event => {
     dispatch(setFilterStatus(event.target.innerText));
   };
-  console.log(backLinkRef);
+
   return (
     <FilterBox>
-      <LinkFilter to={'/'}>
+      <LinkFilter to={backLinkRef.current}>
         <ReplyIcon fontSize="large" />
       </LinkFilter>
       <FilterButton

@@ -8,8 +8,8 @@ import Box from '@mui/material/Box';
 import { LinkToolBar } from './ToolBar.styled';
 import { useLocation } from 'react-router-dom/dist';
 
-const ToolBar = ({ handleDrawerToggle, navItems }) => {
-  const Location = useLocation();
+const ToolBar = ({ handleDrawerToggle }) => {
+  const location = useLocation();
 
   return (
     <Toolbar>
@@ -30,23 +30,20 @@ const ToolBar = ({ handleDrawerToggle, navItems }) => {
         TWEETER
       </Typography>
       <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-        {navItems.map((item, idx) => (
-          <Button key={item} sx={{ color: '#fff' }}>
-            <LinkToolBar
-              state={{ from: Location }}
-              to={`${idx === 0 ? '/' : '/' + item.toLowerCase()}`}
-            >
-              {item}
-            </LinkToolBar>
-          </Button>
-        ))}
+        <Button sx={{ color: '#fff' }}>
+          <LinkToolBar to="/">Home</LinkToolBar>
+        </Button>
+        <Button sx={{ color: '#fff' }}>
+          <LinkToolBar state={{ from: location }} to="/tweets">
+            Tweets
+          </LinkToolBar>
+        </Button>
       </Box>
     </Toolbar>
   );
 };
 ToolBar.propTypes = {
   handleDrawerToggle: PropTypes.func,
-  navItems: PropTypes.array,
 };
 
 export default ToolBar;

@@ -6,7 +6,6 @@ import ToolBar from './toolBar/ToolBar';
 import Shell from './toolBar/Shell';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Tweets'];
 
 function ResponsiveAppBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -19,11 +18,10 @@ function ResponsiveAppBar() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav">
-        <ToolBar navItems={navItems} handleDrawerToggle={handleDrawerToggle} />
+        <ToolBar handleDrawerToggle={handleDrawerToggle} />
       </AppBar>
       <Box component="nav">
         <Shell
-          navItems={navItems}
           handleDrawerToggle={handleDrawerToggle}
           mobileOpen={mobileOpen}
           drawerWidth={drawerWidth}

@@ -2,7 +2,7 @@ import Drawer from '@mui/material/Drawer';
 import PropTypes from 'prop-types';
 import CustomDrawer from './TollBarMenu';
 
-const Shell = ({ mobileOpen, handleDrawerToggle, navItems, drawerWidth }) => {
+const Shell = ({ mobileOpen, handleDrawerToggle, drawerWidth }) => {
   return (
     <Drawer
       variant="temporary"
@@ -19,10 +19,7 @@ const Shell = ({ mobileOpen, handleDrawerToggle, navItems, drawerWidth }) => {
         },
       }}
     >
-      <CustomDrawer
-        navItems={navItems}
-        handleDrawerToggle={handleDrawerToggle}
-      />
+      <CustomDrawer handleDrawerToggle={handleDrawerToggle} />
     </Drawer>
   );
 };
@@ -30,6 +27,5 @@ Shell.propTypes = {
   handleDrawerToggle: PropTypes.func,
   mobileOpen: PropTypes.bool,
   drawerWidth: PropTypes.number,
-  navItems: PropTypes.array,
 };
 export default Shell;
