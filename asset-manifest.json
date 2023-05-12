@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/tweet-app-test/static/css/main.54d223ca.css",
-    "main.js": "/tweet-app-test/static/js/main.13f6c9ec.js",
-    "static/js/156.3f64fa65.chunk.js": "/tweet-app-test/static/js/156.3f64fa65.chunk.js",
-    "static/js/317.6964e37d.chunk.js": "/tweet-app-test/static/js/317.6964e37d.chunk.js",
+    "main.js": "/tweet-app-test/static/js/main.a3f4099b.js",
+    "static/js/156.653c5625.chunk.js": "/tweet-app-test/static/js/156.653c5625.chunk.js",
+    "static/js/317.13bd784c.chunk.js": "/tweet-app-test/static/js/317.13bd784c.chunk.js",
     "static/css/851.6d45aa56.chunk.css": "/tweet-app-test/static/css/851.6d45aa56.chunk.css",
     "static/js/851.690d446e.chunk.js": "/tweet-app-test/static/js/851.690d446e.chunk.js",
     "static/js/741.b614bcea.chunk.js": "/tweet-app-test/static/js/741.b614bcea.chunk.js",
@@ -12,15 +12,15 @@
     "static/media/logo.svg": "/tweet-app-test/static/media/logo.879402870d85471318777d1ebbc5c3c4.svg",
     "index.html": "/tweet-app-test/index.html",
     "main.54d223ca.css.map": "/tweet-app-test/static/css/main.54d223ca.css.map",
-    "main.13f6c9ec.js.map": "/tweet-app-test/static/js/main.13f6c9ec.js.map",
-    "156.3f64fa65.chunk.js.map": "/tweet-app-test/static/js/156.3f64fa65.chunk.js.map",
-    "317.6964e37d.chunk.js.map": "/tweet-app-test/static/js/317.6964e37d.chunk.js.map",
+    "main.a3f4099b.js.map": "/tweet-app-test/static/js/main.a3f4099b.js.map",
+    "156.653c5625.chunk.js.map": "/tweet-app-test/static/js/156.653c5625.chunk.js.map",
+    "317.13bd784c.chunk.js.map": "/tweet-app-test/static/js/317.13bd784c.chunk.js.map",
     "851.6d45aa56.chunk.css.map": "/tweet-app-test/static/css/851.6d45aa56.chunk.css.map",
     "851.690d446e.chunk.js.map": "/tweet-app-test/static/js/851.690d446e.chunk.js.map",
     "741.b614bcea.chunk.js.map": "/tweet-app-test/static/js/741.b614bcea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54d223ca.css",
-    "static/js/main.13f6c9ec.js"
+    "static/js/main.a3f4099b.js"
   ]
 }
